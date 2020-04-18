@@ -2,6 +2,7 @@ package com.akhil.demo;
 
 import com.akhil.demo.controllers.DummyController;
 import com.akhil.demo.data.repositories.PlayerRepository;
+import okhttp3.OkHttpClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,8 @@ public class SpyQualifierTest {
     PlayerRepository playerRepository;
 
     @SpyBean
-    @Qualifier("luckyNumber")
-    Integer lucky=100;
+    @Qualifier("okhttpBean")
+    OkHttpClient okHttpClient;
 
     @Test
     public void test(){

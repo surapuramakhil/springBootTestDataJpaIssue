@@ -1,5 +1,6 @@
 package com.akhil.demo.configurations;
 
+import okhttp3.OkHttpClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -7,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 public class sampleConf {
 
     @Bean("luckyNumber")
-    Integer fun(){
-        return 103;
+    OkHttpClient okhttp(){
+        return new OkHttpClient();
     }
 
 }
